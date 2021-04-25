@@ -3,21 +3,37 @@
 # Check https://circleci.com/docs/2.0/language-php/ for more details
 #
 
-version: 2.0
+version: 2.1
+
+orbs:
+  node: circleci/node@4.2.1
+
 jobs:
   build:
-    machine:
-      image: circleci/classic:latest
-    branches:
-          only:
-            - master
+    docker:
+      - image: cimg/base:stable
     steps:
+      - checkout
+      - node/install:
+          lts: true # only lts works with node-sass
+      - node/install-packages
       - run:
           name: Install LFTP
           command: |
             sudo apt-get update;
             sudo apt-get install lftp;
-      - checkout
+      - run:
+          name: Compile SCS
+          command: npm run compile:css
       - run:
           name: Send Via SFTP
           command: lftp sftp://{USERNAME}:{PASSWORD}@sftp.pressable.com -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ ./wp-content/themes/; quit"
+
+workflows:
+  build-workflow:
+    jobs:
+      - build:
+          filters: 
+            branches:
+              only:  # build will only run on push/merge to main
+                - main
