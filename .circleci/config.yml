@@ -27,7 +27,7 @@ jobs:
           command: npm run compile:css
       - run:
           name: Send Via SFTP
-          command: lftp sftp://USERNAME:PASSWORD@sftp.pressable.com -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ ./wp-content/themes/${THEME}; quit"
+          command: lftp sftp://USERNAME:PASSWORD@sftp.pressable.com -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ ./htdocs/wp-content/themes/${THEME}; quit"
 
 workflows:
   build-workflow:
