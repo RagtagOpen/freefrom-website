@@ -112,17 +112,6 @@ add_action( 'after_setup_theme', 'freefrom_content_width', 0 );
 function freefrom_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'freefrom' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'freefrom' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
-	);
-	register_sidebar(
-		array(
 			'name'          => esc_html__( 'Footer Column 1', 'freefrom' ),
 			'id'            => 'footer-1',
 			'description'   => esc_html__( 'Left column of the footer.', 'freefrom' ),
@@ -161,10 +150,10 @@ add_action( 'widgets_init', 'freefrom_widgets_init' );
  * Enqueue scripts and styles.
  */
 function freefrom_scripts() {
-	wp_enqueue_style( 'freefrom-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'freefrom-style', get_stylesheet_uri(), array(), FREEFROM_VERSION );
 	wp_style_add_data( 'freefrom-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'freefrom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'freefrom-navigation', get_template_directory_uri() . '/js/navigation.js', array(), FREEFROM_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
