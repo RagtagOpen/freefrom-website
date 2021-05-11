@@ -88,6 +88,18 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Theme support for full-width blocks.
+		add_theme_support( 'align-wide' );
+
+		// Theme support for custom logo.
+		add_theme_support( 'custom-logo', array(
+			'height'      => 70,
+			'width'       => 170,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'freefrom_setup' );
