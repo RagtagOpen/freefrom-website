@@ -71,18 +71,6 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'freefrom_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -129,8 +117,41 @@ function freefrom_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'freefrom' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column 1', 'freefrom' ),
+			'id'            => 'footer-1',
+			'description'   => esc_html__( 'Left column of the footer.', 'freefrom' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column 2', 'freefrom' ),
+			'id'            => 'footer-2',
+			'description'   => esc_html__( 'Middle column of the footer.', 'freefrom' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Column 3', 'freefrom' ),
+			'id'            => 'footer-3',
+			'description'   => esc_html__( 'Right column of the footer.', 'freefrom' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }
