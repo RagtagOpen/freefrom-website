@@ -652,6 +652,87 @@ textarea {
   clear: both;
   margin: 0 0 1.5em; }
 
+/* Footer
+--------------------------------------------- */
+#colophon {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  padding: 60px; }
+  #colophon .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; }
+    @media screen and (min-width: 822px) {
+      #colophon .footer-content {
+        display: flex;
+        justify-content: space-between; } }
+    #colophon .footer-content .gform_widget .widget-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      color: #FF9797;
+      margin: 0 0 10px 0; }
+    #colophon .footer-content .gform_widget label {
+      display: none; }
+    #colophon .footer-content .gform_widget input {
+      border-radius: 0;
+      height: 50px;
+      padding: 0 14px; }
+      #colophon .footer-content .gform_widget input::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-weight: 600;
+        color: #000; }
+      #colophon .footer-content .gform_widget input::-moz-placeholder {
+        /* Firefox 19+ */
+        font-weight: 600;
+        color: #000; }
+      #colophon .footer-content .gform_widget input:-ms-input-placeholder {
+        /* IE 10+ */
+        font-weight: 600;
+        color: #000; }
+      #colophon .footer-content .gform_widget input:-moz-placeholder {
+        /* Firefox 18- */
+        font-weight: 600;
+        color: #000; }
+      #colophon .footer-content .gform_widget input.button {
+        background: #47CCCC;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #000;
+        border: none;
+        padding: 16px 20px; }
+    #colophon .footer-content .gform_widget form {
+      display: flex;
+      max-width: 375px; }
+      #colophon .footer-content .gform_widget form .gform_footer {
+        margin: 0;
+        padding: 0; }
+    #colophon .footer-content .jetpack_widget_social_icons h3 {
+      font-size: 36px;
+      line-height: 54px; }
+    #colophon .footer-content .jetpack_widget_social_icons svg {
+      color: #fff; }
+    #colophon .footer-content .widget_nav_menu ul {
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2; }
+      #colophon .footer-content .widget_nav_menu ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        #colophon .footer-content .widget_nav_menu ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 27px; }
+    #colophon .footer-content .footer-3 {
+      max-width: 300px; }
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {

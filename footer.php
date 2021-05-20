@@ -12,17 +12,18 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<?php
-		if ( is_active_sidebar( 'footer-1' ) ) {
-			dynamic_sidebar( 'footer-1' );;
-		}
-		if ( is_active_sidebar( 'footer-2' ) ) {
-			dynamic_sidebar( 'footer-2' );;
-		}
-		if ( is_active_sidebar( 'footer-3' ) ) {
-			dynamic_sidebar( 'footer-3' );;
-		}
-		?>
+		<div class="footer-content">
+			<?php
+			$footer_sidebars = array( 'footer-1', 'footer-2', 'footer-3' );
+			foreach ( $footer_sidebars as $sidebar ) {
+				if ( is_active_sidebar( $sidebar ) ) {
+					echo '<div class="' . $sidebar . '">';
+					dynamic_sidebar( $sidebar );
+					echo '</div>';
+				}
+			}
+			?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
