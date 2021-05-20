@@ -100,6 +100,58 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 			'flex-width'  => true,
 			'header-text' => array( 'site-title', 'site-description' ),
 		) );
+
+		// Disable Custom Colors
+		add_theme_support( 'disable-custom-colors' );
+
+		// Editor Color Palette
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => __( 'Black', 'freefrom' ),
+				'slug'  => 'black',
+				'color'	=> '#000',
+			),
+			array(
+				'name'  => __( 'White', 'freefrom' ),
+				'slug'  => 'white',
+				'color' => '#FFF',
+			),
+			array(
+				'name'  => __( 'Yellow', 'freefrom' ),
+				'slug'  => 'yellow',
+				'color' => '#FFB600',
+			),
+			array(
+				'name'	=> __( 'Pink', 'freefrom' ),
+				'slug'	=> 'pink',
+				'color'	=> '#FF9797',
+			),
+			array(
+				'name'	=> __( 'Peach', 'freefrom' ),
+				'slug'	=> 'peach',
+				'color'	=> '#F06449',
+			),
+			array(
+				'name'	=> __( 'Orange', 'freefrom' ),
+				'slug'	=> 'orange',
+				'color'	=> '#F06449',
+			),
+			array(
+				'name'	=> __( 'Teal', 'freefrom' ),
+				'slug'	=> 'teal',
+				'color'	=> '#47CCCC',
+			),
+			array(
+				'name'	=> __( 'Dark Grey', 'freefrom' ),
+				'slug'	=> 'dark-grey',
+				'color'	=> '#404040',
+			),
+			array(
+				'name'	=> __( 'Off White', 'freefrom' ),
+				'slug'	=> 'off-white',
+				'color'	=> '#F5F6F4',
+			),
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'freefrom_setup' );

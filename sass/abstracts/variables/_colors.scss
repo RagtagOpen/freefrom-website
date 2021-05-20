@@ -1,7 +1,17 @@
-$color__background-body: #fff;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__black: #000;
+$color__white: #fff;
+$color__yellow: #FFB600;
+$color__pink: #FF9797;
+$color__peach: #F06449;
+$color__orange: #F06449;
+$color__teal: #47CCCC;
+$color__dark_grey: #404040;
+$color__off_white: #F5F6F4;
+
+$color__background-body: $color__white;
+$color__background-screen: $color__white;
+$color__background-hr: $color__dark_grey;
+$color__background-button: $color__yellow;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
@@ -13,7 +23,7 @@ $color__link-visited: #800080; //purple
 $color__link-hover: #191970; //midnightblue
 $color__text-main: #404040;
 
-$color__border-button: #ccc #ccc #bbb;
+$color__border-button: $color__yellow;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
