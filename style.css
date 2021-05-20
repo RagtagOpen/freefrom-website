@@ -431,7 +431,7 @@ body {
   background: #fff; }
 
 hr {
-  background-color: #ccc;
+  background-color: #404040;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -494,9 +494,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border-color: #FFB600;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #FFB600;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1;
   padding: 0.6em 1em 0.4em; }
@@ -735,6 +735,64 @@ textarea {
 .gallery-caption {
   display: block; }
 
+/* Gutenberg
+--------------------------------------------- */
+/* Color Options
+--------------------------------------------- */
+.has-black-color {
+  color: #000; }
+
+.has-black-background-color {
+  background-color: #000; }
+
+.has-white-color {
+  color: #FFF; }
+
+.has-white-background-color {
+  background-color: #FFF; }
+
+.has-yellow-color {
+  color: #FFB600; }
+
+.has-yellow-background-color {
+  background-color: #FFB600; }
+
+.has-pink-color {
+  color: #FF9797; }
+
+.has-pink-background-color {
+  background-color: #FF9797; }
+
+.has-peach-color {
+  color: #F06449; }
+
+.has-peach-background-color {
+  background-color: #F06449; }
+
+.has-orange-color {
+  color: #F06449; }
+
+.has-orange-background-color {
+  background-color: #F06449; }
+
+.has-teal-color {
+  color: #47CCCC; }
+
+.has-teal-background-color {
+  background-color: #47CCCC; }
+
+.has-dark_grey-color {
+  color: #404040; }
+
+.has-dark_grey-background-color {
+  background-color: #404040; }
+
+.has-off_white-color {
+  color: #F5F6F4; }
+
+.has-off_white-background-color {
+  background-color: #F5F6F4; }
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -767,7 +825,7 @@ textarea {
   width: 1px;
   word-wrap: normal !important; }
   .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
