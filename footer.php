@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="footer-content">
+		<div class="footer-content width-wrapper">
 			<?php
 			$footer_sidebars = array( 'footer-1', 'footer-2', 'footer-3' );
 			foreach ( $footer_sidebars as $sidebar ) {

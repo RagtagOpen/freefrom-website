@@ -127,11 +127,6 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 				'color'	=> '#FF9797',
 			),
 			array(
-				'name'	=> __( 'Peach', 'freefrom' ),
-				'slug'	=> 'peach',
-				'color'	=> '#F06449',
-			),
-			array(
 				'name'	=> __( 'Orange', 'freefrom' ),
 				'slug'	=> 'orange',
 				'color'	=> '#F06449',
