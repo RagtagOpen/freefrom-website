@@ -247,6 +247,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/** Initialize block pattern category */
+function freefrom_register_block_pattern_categories() {
+	register_block_pattern_category(
+		'freefrom',
+		array( 'label' => __( 'FreeFrom', 'freefrom' ) )
+	);
+}
+
+add_action( 'init', 'freefrom_register_block_pattern_categories' );
+
 /** Initialize block patterns */
 function freefrom_register_block_patterns() {
 
@@ -256,6 +266,7 @@ function freefrom_register_block_patterns() {
 			'freefrom/image-cta',
 			array(
 				'title'       => 'Image CTA',
+				'categories'    => array( 'freefrom' ),
 				'content'     => "<!-- wp:columns --> <div class=\"wp-block-columns\"><!-- wp:column {\"width\":\"33.33%\"} --> <div class=\"wp-block-column\" style=\"flex-basis:33.33%\"><!-- wp:image {\"id\":7,\"width\":236,\"height\":133,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} --> <figure class=\"wp-block-image size-large is-resized\"><img src=\"http://localhost/wordpress/wp-content/uploads/2021/05/background-1024x576.jpg\" alt=\"\" class=\"wp-image-7\" width=\"236\" height=\"133\"/></figure> <!-- /wp:image --></div> <!-- /wp:column --> <!-- wp:column {\"width\":\"98.66%\"} --> <div class=\"wp-block-column\" style=\"flex-basis:98.66%\"><!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":22},\"color\":{\"background\":\"#febd00\"}},\"textColor\":\"white\"} --> <p class=\"has-white-color has-text-color has-background\" style=\"background-color:#febd00;font-size:22px\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non mattis lacus, vel hendrerit nisi.</p> <!-- /wp:paragraph --></div> <!-- /wp:column --></div> <!-- /wp:columns -->"
 			)
 		);
