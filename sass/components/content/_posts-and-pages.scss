@@ -11,13 +11,14 @@
 	display: none;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-title {
+	font-weight: bold;
+	font-size: 72px;
+	line-height: 108px;
+	text-transform: uppercase;
 }

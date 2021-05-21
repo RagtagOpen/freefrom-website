@@ -477,11 +477,11 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1; }
+  color: #47CCCC; }
   a:visited {
-    color: #800080; }
+    color: #47CCCC; }
   a:hover, a:focus, a:active {
-    color: #191970; }
+    color: #F06449; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -561,18 +561,31 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.width-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; }
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+#masthead {
+  padding: 30px 0; }
+  #masthead .header-content {
+    display: flex;
+    justify-content: space-between; }
+  #masthead .custom-logo-link {
+    width: 168px; }
+
 .main-navigation {
   display: block;
   width: 100%; }
   .main-navigation ul {
     display: none;
     list-style: none;
-    margin: 0;
+    margin: 35px 0 0 0;
     padding-left: 0; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -594,10 +607,30 @@ textarea {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    position: relative; }
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    padding: 0 20px; }
+    .main-navigation li:last-child {
+      padding-right: 0; }
+    .main-navigation li:hover > a,
+    .main-navigation li.focus > a {
+      text-decoration: underline;
+      color: #F06449; }
+    .main-navigation li.donate a {
+      color: #47CCCC; }
+      .main-navigation li.donate a:hover {
+        color: #F06449; }
+    .main-navigation li.exit a {
+      color: #F06449; }
+      .main-navigation li.exit a:hover {
+        color: #47CCCC; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000; }
 
 /* Small menu. */
 .menu-toggle,
@@ -608,7 +641,8 @@ textarea {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: flex; } }
+    display: flex;
+    justify-content: flex-end; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -643,14 +677,15 @@ textarea {
 .updated:not(.published) {
   display: none; }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
-
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.entry-title {
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 108px;
+  text-transform: uppercase; }
 
 /* Footer
 --------------------------------------------- */
@@ -659,79 +694,75 @@ textarea {
   color: #fff;
   width: 100%;
   padding: 60px; }
-  #colophon .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%; }
-    @media screen and (min-width: 822px) {
-      #colophon .footer-content {
-        display: flex;
-        justify-content: space-between; } }
-    #colophon .footer-content .gform_widget .widget-title {
+  @media screen and (min-width: 822px) {
+    #colophon .footer-content {
+      display: flex;
+      justify-content: space-between; } }
+  #colophon .footer-content .gform_widget .widget-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FF9797;
+    margin: 0 0 10px 0; }
+  #colophon .footer-content .gform_widget label {
+    display: none; }
+  #colophon .footer-content .gform_widget input {
+    border-radius: 0;
+    height: 50px;
+    padding: 0 14px; }
+    #colophon .footer-content .gform_widget input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      font-weight: 600;
+      color: #000; }
+    #colophon .footer-content .gform_widget input::-moz-placeholder {
+      /* Firefox 19+ */
+      font-weight: 600;
+      color: #000; }
+    #colophon .footer-content .gform_widget input:-ms-input-placeholder {
+      /* IE 10+ */
+      font-weight: 600;
+      color: #000; }
+    #colophon .footer-content .gform_widget input:-moz-placeholder {
+      /* Firefox 18- */
+      font-weight: 600;
+      color: #000; }
+    #colophon .footer-content .gform_widget input.button {
+      background: #47CCCC;
       font-weight: 700;
       font-size: 24px;
-      line-height: 36px;
-      color: #FF9797;
-      margin: 0 0 10px 0; }
-    #colophon .footer-content .gform_widget label {
-      display: none; }
-    #colophon .footer-content .gform_widget input {
-      border-radius: 0;
-      height: 50px;
-      padding: 0 14px; }
-      #colophon .footer-content .gform_widget input::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        font-weight: 600;
-        color: #000; }
-      #colophon .footer-content .gform_widget input::-moz-placeholder {
-        /* Firefox 19+ */
-        font-weight: 600;
-        color: #000; }
-      #colophon .footer-content .gform_widget input:-ms-input-placeholder {
-        /* IE 10+ */
-        font-weight: 600;
-        color: #000; }
-      #colophon .footer-content .gform_widget input:-moz-placeholder {
-        /* Firefox 18- */
-        font-weight: 600;
-        color: #000; }
-      #colophon .footer-content .gform_widget input.button {
-        background: #47CCCC;
-        font-weight: 700;
-        font-size: 24px;
-        text-transform: uppercase;
-        color: #000;
-        border: none;
-        padding: 16px 20px; }
-    #colophon .footer-content .gform_widget form {
-      display: flex;
-      max-width: 375px; }
-      #colophon .footer-content .gform_widget form .gform_footer {
-        margin: 0;
-        padding: 0; }
-    #colophon .footer-content .jetpack_widget_social_icons h3 {
-      font-size: 36px;
-      line-height: 54px; }
-    #colophon .footer-content .jetpack_widget_social_icons svg {
-      color: #fff; }
-    #colophon .footer-content .widget_nav_menu ul {
+      text-transform: uppercase;
+      color: #000;
+      border: none;
+      padding: 16px 20px; }
+  #colophon .footer-content .gform_widget form {
+    display: flex;
+    max-width: 375px; }
+    #colophon .footer-content .gform_widget form .gform_footer {
       margin: 0;
-      padding: 0;
-      columns: 2;
-      -webkit-columns: 2;
-      -moz-columns: 2; }
-      #colophon .footer-content .widget_nav_menu ul li {
-        list-style: none;
-        margin: 0;
-        padding: 0; }
-        #colophon .footer-content .widget_nav_menu ul li a {
-          color: #fff;
-          text-decoration: none;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 27px; }
-    #colophon .footer-content .footer-3 {
-      max-width: 300px; }
+      padding: 0; }
+  #colophon .footer-content .jetpack_widget_social_icons h3 {
+    font-size: 36px;
+    line-height: 54px; }
+  #colophon .footer-content .jetpack_widget_social_icons svg {
+    color: #fff; }
+  #colophon .footer-content .widget_nav_menu ul {
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2; }
+    #colophon .footer-content .widget_nav_menu ul li {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      #colophon .footer-content .widget_nav_menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px; }
+  #colophon .footer-content .footer-3 {
+    max-width: 300px; }
 
 /* Comments
 --------------------------------------------- */
@@ -844,12 +875,6 @@ textarea {
 .has-pink-background-color {
   background-color: #FF9797; }
 
-.has-peach-color {
-  color: #F06449; }
-
-.has-peach-background-color {
-  background-color: #F06449; }
-
 .has-orange-color {
   color: #F06449; }
 
@@ -950,3 +975,14 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em; }
+
+.alignfull {
+  margin: 0 calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw; }
+
+.alignwide {
+  margin-left: -4em;
+  margin-right: -4em;
+  width: calc( 100% + 8em);
+  max-width: 96vw; }
