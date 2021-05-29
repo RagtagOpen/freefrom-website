@@ -382,6 +382,36 @@ h5,
 h6 {
   clear: both; }
 
+h1 {
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 108px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+
+h2 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 96px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+
+h3 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 63px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+
+h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase; }
+
+h5 {
+  text-transform: uppercase; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -561,7 +591,9 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-.width-wrapper {
+.width-wrapper,
+.alignfull .wp-block-group__inner-container,
+.alignwide .wp-block-group__inner-container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%; }
@@ -686,6 +718,13 @@ textarea {
   font-size: 72px;
   line-height: 108px;
   text-transform: uppercase; }
+
+.post-thumbnail {
+  width: 100%; }
+  .post-thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto; }
 
 /* Footer
 --------------------------------------------- */
@@ -887,17 +926,20 @@ textarea {
 .has-teal-background-color {
   background-color: #47CCCC; }
 
-.has-dark_grey-color {
+.has-grey-color {
   color: #404040; }
 
-.has-dark_grey-background-color {
+.has-grey-background-color {
   background-color: #404040; }
 
-.has-off_white-color {
+.has-offwhite-color {
   color: #F5F6F4; }
 
-.has-off_white-background-color {
+.has-offwhite-background-color {
   background-color: #F5F6F4; }
+
+.wp-block-group {
+  padding: 50px 0; }
 
 /*--------------------------------------------------------------
 # Plugins

@@ -1,4 +1,6 @@
-.width-wrapper {
+.width-wrapper,
+.alignfull .wp-block-group__inner-container,
+.alignwide .wp-block-group__inner-container {
 	max-width: 1200px;
 	margin: 0 auto;
 	width: 100%;

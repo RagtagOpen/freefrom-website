@@ -46,6 +46,7 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'post-thumbnail', 9999, 545, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -138,12 +139,12 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 			),
 			array(
 				'name'	=> __( 'Dark Grey', 'freefrom' ),
-				'slug'	=> 'dark-grey',
+				'slug'	=> 'grey',
 				'color'	=> '#404040',
 			),
 			array(
 				'name'	=> __( 'Off White', 'freefrom' ),
-				'slug'	=> 'off-white',
+				'slug'	=> 'offwhite',
 				'color'	=> '#F5F6F4',
 			),
 		) );
