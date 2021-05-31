@@ -47,6 +47,7 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'post-thumbnail', 9999, 545, true );
+		add_image_size( 'headshot', 400, 400, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -420,3 +421,119 @@ function freefrom_register_block_patterns() {
 
 }
 add_action( 'init', 'freefrom_register_block_patterns' );
+
+/*
+ * Custom Post Types
+ */
+
+function freefrom_cpt_team() {
+
+	$labels = array(
+		'name'                  => _x( 'Team Members', 'Post Type General Name', 'freefrom' ),
+		'singular_name'         => _x( 'Team Member', 'Post Type Singular Name', 'freefrom' ),
+		'menu_name'             => __( 'Team Members', 'freefrom' ),
+		'name_admin_bar'        => __( 'Team Member', 'freefrom' ),
+		'archives'              => __( 'Team Member Archives', 'freefrom' ),
+		'attributes'            => __( 'Team Member Attributes', 'freefrom' ),
+		'parent_item_colon'     => __( 'Parent Team Member:', 'freefrom' ),
+		'all_items'             => __( 'All Team Members', 'freefrom' ),
+		'add_new_item'          => __( 'Add New Team Member', 'freefrom' ),
+		'add_new'               => __( 'Add New', 'freefrom' ),
+		'new_item'              => __( 'New Team Member', 'freefrom' ),
+		'edit_item'             => __( 'Edit Team Member', 'freefrom' ),
+		'update_item'           => __( 'Update Team Member', 'freefrom' ),
+		'view_item'             => __( 'View Team Member', 'freefrom' ),
+		'view_items'            => __( 'View Team Members', 'freefrom' ),
+		'search_items'          => __( 'Search Team Member', 'freefrom' ),
+		'not_found'             => __( 'Not found', 'freefrom' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'freefrom' ),
+		'featured_image'        => __( 'Featured Image', 'freefrom' ),
+		'set_featured_image'    => __( 'Set featured image', 'freefrom' ),
+		'remove_featured_image' => __( 'Remove featured image', 'freefrom' ),
+		'use_featured_image'    => __( 'Use as featured image', 'freefrom' ),
+		'insert_into_item'      => __( 'Insert into Team Member', 'freefrom' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Team Member', 'freefrom' ),
+		'items_list'            => __( 'Team Members list', 'freefrom' ),
+		'items_list_navigation' => __( 'Team Members list navigation', 'freefrom' ),
+		'filter_items_list'     => __( 'Filter Team Members list', 'freefrom' ),
+	);
+	$args = array(
+		'label'                 => __( 'Team Member', 'freefrom' ),
+		'description'           => __( 'Team Member', 'freefrom' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-buddicons-buddypress-logo',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => false,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'team_member', $args );
+
+}
+add_action( 'init', 'freefrom_cpt_team', 0 );
+
+function freefrom_cpt_event() {
+
+	$labels = array(
+		'name'                  => _x( 'Events', 'Post Type General Name', 'freefrom' ),
+		'singular_name'         => _x( 'Event', 'Post Type Singular Name', 'freefrom' ),
+		'menu_name'             => __( 'Events', 'freefrom' ),
+		'name_admin_bar'        => __( 'Event', 'freefrom' ),
+		'archives'              => __( 'Event Archives', 'freefrom' ),
+		'attributes'            => __( 'Event Attributes', 'freefrom' ),
+		'parent_item_colon'     => __( 'Parent Event:', 'freefrom' ),
+		'all_items'             => __( 'All Team Events', 'freefrom' ),
+		'add_new_item'          => __( 'Add New Event', 'freefrom' ),
+		'add_new'               => __( 'Add New', 'freefrom' ),
+		'new_item'              => __( 'New Event', 'freefrom' ),
+		'edit_item'             => __( 'Edit Event', 'freefrom' ),
+		'update_item'           => __( 'Update Event', 'freefrom' ),
+		'view_item'             => __( 'View Event', 'freefrom' ),
+		'view_items'            => __( 'View Events', 'freefrom' ),
+		'search_items'          => __( 'Search Event', 'freefrom' ),
+		'not_found'             => __( 'Not found', 'freefrom' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'freefrom' ),
+		'featured_image'        => __( 'Featured Image', 'freefrom' ),
+		'set_featured_image'    => __( 'Set featured image', 'freefrom' ),
+		'remove_featured_image' => __( 'Remove featured image', 'freefrom' ),
+		'use_featured_image'    => __( 'Use as featured image', 'freefrom' ),
+		'insert_into_item'      => __( 'Insert into Event', 'freefrom' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Event', 'freefrom' ),
+		'items_list'            => __( 'Events list', 'freefrom' ),
+		'items_list_navigation' => __( 'Events list navigation', 'freefrom' ),
+		'filter_items_list'     => __( 'Filter Events list', 'freefrom' ),
+	);
+	$args = array(
+		'label'                 => __( 'Event', 'freefrom' ),
+		'description'           => __( 'Event', 'freefrom' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-calendar-alt',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => false,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'event', $args );
+
+}
+add_action( 'init', 'freefrom_cpt_event', 0 );

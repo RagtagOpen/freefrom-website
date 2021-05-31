@@ -5,6 +5,7 @@
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
+@import "content/team-member";
 
 /* Footer
 --------------------------------------------- */
@@ -33,4 +34,5 @@
 /* Gutenberg
 --------------------------------------------- */
 @import "gutenberg/colors";
+@import "gutenberg/patterns";
 @import "gutenberg/blocks";

@@ -32,3 +32,22 @@
 		height: auto;
 	}
 }
+
+.has-back-link {
+	display: flex;
+
+	.navigation-link {
+		width: 225px;
+
+		a {
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: 700;
+			font-size: 18px;
+		}
+	}
+
+	article {
+		width: calc( 100% - 225px );
+	}
+}

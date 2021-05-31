@@ -1,0 +1,24 @@
+.wp-block-group.image-cta {
+	padding: 0;
+
+	.wp-block-columns.has-background {
+		padding: 0;
+
+		figure {
+			margin: 0;
+			position: relative;
+			height: 100%;
+
+			img {
+				display: block;
+				height: 100%;
+				width: auto;
+			}
+		}
+	}
+
+	a {
+		text-decoration: none;
+		font-weight: 700;
+	}
+}
