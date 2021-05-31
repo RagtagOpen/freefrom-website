@@ -1,0 +1,18 @@
+.single-team_member {
+	article {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.post-thumbnail {
+		width: 40%;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	.team-member {
+		width: 55%;
+	}
+}

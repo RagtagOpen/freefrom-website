@@ -163,3 +163,27 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+if ( ! function_exists( 'freefrom_back_link' ) ) :
+	function freefrom_back_link() {
+		$url = home_url();
+		$text = __( 'Back to homepage', 'freefrom' );
+		$type = get_post_type();
+		switch ( $type ) {
+			case 'post':
+				$url = home_url() . '/news';
+				$text = __( 'See more news', 'freefrom' );
+				break;
+			case 'team_member':
+				$url = home_url() . '/team';
+				$text = __( 'Back to our team', 'freefrom' );
+				break;
+		}
+
+		?>
+		<p class="navigation-link">
+			<a href="<?php echo esc_url( $url ); ?>" title="<?php echo esc_attr( $text ); ?>">&larr; <?php echo esc_html( $text ); ?></a>
+		</p>
+		<?php
+	}
+endif;

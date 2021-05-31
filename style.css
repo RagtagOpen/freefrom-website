@@ -816,6 +816,35 @@ textarea {
 	text-transform: uppercase;
 }
 
+.has-back-link {
+	display: flex;
+}
+
+.has-back-link .navigation-link {
+	width: 225px;
+}
+
+.has-back-link article {
+	width: calc( 100% - 225px);
+}
+
+.single-team_member article {
+	display: flex;
+	justify-content: space-between;
+}
+
+.single-team_member .post-thumbnail {
+	width: 40%;
+}
+
+.single-team_member .post-thumbnail img {
+	border-radius: 50%;
+}
+
+.single-team_member .team-member {
+	width: 55%;
+}
+
 /* Footer
 --------------------------------------------- */
 #colophon {

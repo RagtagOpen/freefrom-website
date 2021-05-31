@@ -22,3 +22,15 @@
 	line-height: 108px;
 	text-transform: uppercase;
 }
+
+.has-back-link {
+	display: flex;
+
+	.navigation-link {
+		width: 225px;
+	}
+
+	article {
+		width: calc( 100% - 225px );
+	}
+}
