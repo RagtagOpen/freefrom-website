@@ -128,7 +128,7 @@ if ( ! function_exists( 'freefrom_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

@@ -23,6 +23,16 @@
 	text-transform: uppercase;
 }
 
+.post-thumbnail {
+	width: 100%;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
 .has-back-link {
 	display: flex;
 
