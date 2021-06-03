@@ -543,3 +543,59 @@ function freefrom_cpt_event() {
 
 }
 add_action( 'init', 'freefrom_cpt_event', 0 );
+
+function freefrom_cpt_job() {
+
+	$labels = array(
+		'name'                  => _x( 'Jobs', 'Post Type General Name', 'freefrom' ),
+		'singular_name'         => _x( 'Job', 'Post Type Singular Name', 'freefrom' ),
+		'menu_name'             => __( 'Jobs', 'freefrom' ),
+		'name_admin_bar'        => __( 'Job', 'freefrom' ),
+		'archives'              => __( 'Job Archives', 'freefrom' ),
+		'attributes'            => __( 'Job Attributes', 'freefrom' ),
+		'parent_item_colon'     => __( 'Parent Job:', 'freefrom' ),
+		'all_items'             => __( 'All Jobs', 'freefrom' ),
+		'add_new_item'          => __( 'Add New Job', 'freefrom' ),
+		'add_new'               => __( 'Add New', 'freefrom' ),
+		'new_item'              => __( 'New Job', 'freefrom' ),
+		'edit_item'             => __( 'Edit Job', 'freefrom' ),
+		'update_item'           => __( 'Update Job', 'freefrom' ),
+		'view_item'             => __( 'View Job', 'freefrom' ),
+		'view_items'            => __( 'View Jobs', 'freefrom' ),
+		'search_items'          => __( 'Search Job', 'freefrom' ),
+		'not_found'             => __( 'Not found', 'freefrom' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'freefrom' ),
+		'featured_image'        => __( 'Featured Image', 'freefrom' ),
+		'set_featured_image'    => __( 'Set featured image', 'freefrom' ),
+		'remove_featured_image' => __( 'Remove featured image', 'freefrom' ),
+		'use_featured_image'    => __( 'Use as featured image', 'freefrom' ),
+		'insert_into_item'      => __( 'Insert into Job', 'freefrom' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Job', 'freefrom' ),
+		'items_list'            => __( 'Jobs list', 'freefrom' ),
+		'items_list_navigation' => __( 'Jobs list navigation', 'freefrom' ),
+		'filter_items_list'     => __( 'Filter Jobs list', 'freefrom' ),
+	);
+	$args = array(
+		'label'                 => __( 'Job', 'freefrom' ),
+		'description'           => __( 'Job Opening', 'freefrom' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'revisions' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-awards',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => false,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'job', $args );
+
+}
+add_action( 'init', 'freefrom_cpt_job', 0 );
