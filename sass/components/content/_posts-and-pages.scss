@@ -51,3 +51,20 @@
 		width: calc( 100% - 225px );
 	}
 }
+
+.posted-on {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+	color: $color__steel_grey;
+	display: block;
+	margin-top: 15px;
+}
+
+.single-post .entry-title {
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 63px;
+	text-transform: none;
+	margin-top: 20px;
+}

@@ -48,6 +48,7 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'post-thumbnail', 9999, 545, true );
 		add_image_size( 'headshot', 400, 400, true );
+		add_image_size( 'blog', 905, 540, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -142,6 +143,11 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 				'name'	=> __( 'Dark Grey', 'freefrom' ),
 				'slug'	=> 'grey',
 				'color'	=> '#404040',
+			),
+			array(
+				'name'	=> __( 'Steel Grey', 'freefrom' ),
+				'slug'	=> 'steelgrey',
+				'color'	=> '#6E7E91',
 			),
 			array(
 				'name'	=> __( 'Off White', 'freefrom' ),
