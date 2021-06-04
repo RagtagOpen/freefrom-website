@@ -19,13 +19,6 @@
 	<div class="entry-content width-wrapper">
 		<?php
 		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'freefrom' ),
-				'after'  => '</div>',
-			)
-		);
 		?>
 	</div><!-- .entry-content -->
 
