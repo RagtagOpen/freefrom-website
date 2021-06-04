@@ -891,7 +891,7 @@ textarea {
 	margin-top: 15px;
 }
 
-.single-post .entry-title {
+.single .entry-title {
 	font-weight: 700;
 	font-size: 42px;
 	line-height: 63px;
@@ -899,25 +899,48 @@ textarea {
 	margin-top: 20px;
 }
 
-.single-team_member article {
+@media screen and (min-width: 652px) {
+	.posts-feed {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+	}
+	.posts-feed article {
+		width: 30%;
+	}
+}
+
+.posts-feed .entry-title {
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 31px;
+	text-transform: none;
+}
+
+.posts-feed .entry-title a {
+	text-decoration: none;
+	color: #000;
+}
+
+.single.single-team_member article {
 	display: flex;
 	justify-content: space-between;
 }
 
-.single-team_member .post-thumbnail {
+.single.single-team_member .post-thumbnail {
 	width: 40%;
 }
 
-.single-team_member .post-thumbnail img {
+.single.single-team_member .post-thumbnail img {
 	border-radius: 50%;
 }
 
-.single-team_member .team-member {
+.single.single-team_member .team-member {
 	width: 55%;
 	padding-bottom: 100px;
 }
 
-.single-team_member .entry-title {
+.single.single-team_member .entry-title {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 24px;

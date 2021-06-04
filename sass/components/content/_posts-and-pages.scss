@@ -68,3 +68,27 @@
 	text-transform: none;
 	margin-top: 20px;
 }
+
+.posts-feed {
+
+	@media screen and (min-width:$breakpoint_lg) {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+
+		article {
+			width: 30%;
+		}
+	}
+	.entry-title {
+		font-weight: 700;
+		font-size: 21px;
+		line-height: 31px;
+		text-transform: none;
+
+		a {
+			text-decoration: none;
+			color: $color__black;
+		}
+	}
+}

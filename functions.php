@@ -49,6 +49,7 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 		add_image_size( 'post-thumbnail', 9999, 545, true );
 		add_image_size( 'headshot', 400, 400, true );
 		add_image_size( 'blog', 905, 540, true );
+		add_image_size( 'blog-thumb', 400, 400, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
