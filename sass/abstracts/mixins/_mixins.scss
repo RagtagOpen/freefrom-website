@@ -9,3 +9,13 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin image-flush {
+	.has-background {
+		padding: 25px;
+
+		figure {
+			margin: -25px -25px 0 -25px;
+		}
+	}
+}
