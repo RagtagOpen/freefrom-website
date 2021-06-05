@@ -529,7 +529,33 @@ ul {
 }
 
 ol {
-	list-style: decimal;
+	list-style: none;
+	counter-reset: freefrom-counter;
+}
+
+ol li {
+	counter-increment: freefrom-counter;
+	min-height: 125px;
+	margin-bottom: 60px;
+	font-size: 24px;
+	line-height: 36px;
+	position: relative;
+	padding-left: 175px;
+}
+
+ol li strong {
+	display: inline;
+}
+
+ol li:before {
+	content: counter(freefrom-counter);
+	color: #F06449;
+	font-weight: 700;
+	font-size: 125px;
+	line-height: 130px;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 li > ul,
@@ -1443,6 +1469,12 @@ textarea {
 
 .wp-block-group {
 	padding: 50px 0;
+}
+
+.wp-block-quote.is-style-large {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 72px;
 }
 
 /*--------------------------------------------------------------

@@ -8,7 +8,33 @@ ul {
 }
 
 ol {
-	list-style: decimal;
+	list-style: none;
+	counter-reset: freefrom-counter;
+
+	li {
+		counter-increment: freefrom-counter;
+		min-height: 125px;
+		margin-bottom: 60px;
+		font-size: 24px;
+		line-height: 36px;
+		position: relative;
+		padding-left: 175px;
+
+		strong {
+			display: inline;
+		}
+
+		&:before {
+			content: counter(freefrom-counter);
+			color: $color__orange;
+			font-weight: 700;
+			font-size: 125px;
+			line-height: 130px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
 }
 
 li > ul,

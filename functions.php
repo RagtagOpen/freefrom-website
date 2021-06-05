@@ -46,7 +46,7 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'post-thumbnail', 9999, 545, true );
+		add_image_size( 'post-thumbnail', 1400, 545, true );
 		add_image_size( 'headshot', 400, 400, true );
 		add_image_size( 'blog', 905, 540, true );
 		add_image_size( 'blog-thumb', 400, 400, true );
