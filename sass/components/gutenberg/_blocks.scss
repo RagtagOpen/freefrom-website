@@ -2,8 +2,10 @@
 	padding: 50px 0;
 }
 
-.wp-block-quote.is-style-large {
+.wp-block-quote.is-large p,
+.wp-block-quote.is-style-large p {
 	font-weight: 700;
 	font-size: 48px;
 	line-height: 72px;
+	font-style: normal;
 }
