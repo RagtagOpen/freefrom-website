@@ -33,8 +33,10 @@
 }
 
 .alignwide {
-	margin-left: -4em;
-	margin-right: -4em;
-	width: calc( 100% + 8em );
-	max-width: 96vw;
+	@media screen and (min-width:$breakpoint_xl) {
+		margin-left: -4em;
+		margin-right: -4em;
+		width: calc( 100% + 8em );
+		max-width: 96vw;
+	}
 }

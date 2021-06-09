@@ -50,3 +50,21 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+@media screen and (max-width:$breakpoint_lg) {
+	ul {
+		margin: 0;
+		padding-left: 60px;
+	}
+	ol {
+		margin: 0;
+		padding: 0;
+		li {
+			padding-left: 60px;
+			&:before {
+				font-size: 60px;
+				line-height: 65px
+			}
+		}
+	}
+}

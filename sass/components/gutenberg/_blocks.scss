@@ -5,7 +5,11 @@
 .wp-block-quote.is-large p,
 .wp-block-quote.is-style-large p {
 	font-weight: 700;
-	font-size: 48px;
-	line-height: 72px;
+	font-size: 30px;
+	line-height: 48px;
 	font-style: normal;
+	@media screen and (min-width:$breakpoint_lg) {
+		font-size: 48px;
+		line-height: 72px;
+	}
 }

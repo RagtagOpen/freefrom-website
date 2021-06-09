@@ -5,3 +5,11 @@
 	margin: 0 auto;
 	width: 100%;
 }
+
+.width-wrapper,
+.alignfull > .wp-block-group__inner-container,
+.alignwide > .wp-block-group__inner-container {
+	@media screen and (max-width:$breakpoint_xl) {
+		max-width: calc(100vw - 2rem);
+	}
+}
