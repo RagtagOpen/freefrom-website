@@ -213,6 +213,128 @@
 	}
 }
 
+.wp-block-group.featured-media-panel {
+	h2 {
+		font-weight: 700;
+	}
+
+	.wp-block-embed__wrapper {
+		text-align: center;
+
+		iframe {
+			width: 100%;
+			height: 480px;
+		}
+	}
+
+	.wp-block-button__link:hover {
+			color: $color__teal !important;
+	}
+
+	.wp-block-columns .wp-block-column:first-child h2 {
+		margin-top: 0;
+	}
+}
+
+.wp-block-group.image-w-paragraph {
+	@include button-link;
+
+	h3 {
+		font-weight: bold;
+	}
+
+	.wp-block-button__link:hover {
+		color: $color__teal !important;
+	}
+}
+
+.wp-block-group.detailed-image-grid {
+	@include button-link;
+
+	.wp-block-column p {
+		margin-top: 0;
+		color: $color__steel_grey;
+	}
+
+	.wp-block-column strong {
+		display: inline-block;
+		margin-bottom: 5px;
+		font-size: 18px;
+		color: $color__black;
+	}
+
+	.wp-block-button__link {
+		padding-left: 0;
+		font-weight: 600;
+
+	 	&:hover {
+			color: $color__teal !important;
+		}
+	}
+}
+
+.wp-block-group.preview-cta {
+	@include button-link;
+}
+
+.wp-block-group.copy-grid {
+	.wp-block-column p:nth-of-type(1) {
+		margin-top: 0;
+		color: $color__steel_grey;
+	}
+
+	.wp-block-column strong {
+		display: inline-block;
+		margin-bottom: 5px;
+		font-size: 18px;
+		color: $color__black;
+	}
+}
+
+.wp-block-group.three-column-call-outs {
+	.wp-block-column p:nth-of-type(1) {
+		margin-top: 0;
+		color: $color__steel_grey;
+	}
+
+	.wp-block-column strong {
+		display: inline-block;
+		margin-bottom: 5px;
+		font-size: 18px;
+		color: $color__black;
+	}
+}
+
+.wp-block-group.topic-detail-panel {
+	.wp-block-column p:first-child strong {
+		font-size: 18px;
+	}
+
+	.wp-block-columns:first-child { // header
+		.wp-block-column:nth-child(2) {
+			margin-left: 0;
+			padding-left: 2em;
+			background: $color__off_white;	
+			
+			p:first-child {
+				margin-bottom: 0;
+
+				strong {
+					font-size: 1em;
+				}
+			}
+		}
+
+		figure {
+			margin: 0;
+	
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
 // Mobile styling for news section at bottom of home page.
 @media screen and (max-width:$breakpoint_lg) {
 	.alignwide {
