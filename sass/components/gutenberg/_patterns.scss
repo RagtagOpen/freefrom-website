@@ -32,8 +32,6 @@
 	h3 {
 		margin-top: 20px;
 		margin-bottom: 0;
-		font-size: 42px;
-		line-height: 63px;
 		font-weight: 700;
 	}
 
@@ -87,10 +85,9 @@
 
 	p.has-background {
 		font-weight: bold;
-		font-size: 30px;
-		line-height: 45px;
 		position: relative;
-		padding-left: 120px;
+		font-size: 22px;
+		line-height: 32px;
 
 		&:before {
 			content: '\2192';
@@ -99,8 +96,19 @@
 			top: 0;
 			font-size: 60px;
 			height: 100%;
-			display: flex;
 			align-items: center;
+
+			// Mobile
+			display: none;
+		}
+
+		@media screen and (min-width:$breakpoint_lg) {
+			font-size: 30px;
+			line-height: 45px;
+			padding-left: 120px;
+			&:before {
+				display: flex;
+			}
 		}
 	}
 }
@@ -189,6 +197,17 @@
 				left: 0;
 				top: 45px;
 				font-family: 'Calibri', 'Times', serif;
+			}
+
+			@media screen and (max-width:$breakpoint_lg) {
+				font-size: 24px;
+				line-height: 30px;
+				padding-left: 50px;
+
+				&:before {
+					font-size: 60px;
+					top: 0;
+				}
 			}
 		}
 	}
@@ -311,6 +330,20 @@
 	
 			img {
 				width: 100%;
+			}
+		}
+	}
+}
+
+// Mobile styling for news section at bottom of home page.
+@media screen and (max-width:$breakpoint_lg) {
+	.alignwide {
+		.wp-block-column {
+			flex-basis: 50% !important; // We're trying to supersede .wp-block-column { flex-basis: 100% !important };
+		}
+		.wp-block-image {
+			.size-large {
+				max-width: 85%;
 			}
 		}
 	}

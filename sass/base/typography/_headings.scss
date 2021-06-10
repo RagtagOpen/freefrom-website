@@ -37,3 +37,18 @@ h4 {
 h5 {
 	text-transform: uppercase;
 }
+
+@media screen and (max-width:$breakpoint_lg) {
+	h1 {
+		font-size: 64px;
+		line-height: 96px;
+	}
+	h2 {
+		font-size: 42px;
+		line-height: 63px;
+	}
+	h3 {
+		font-size: 32px;
+		line-height: 48px;
+	}
+}
