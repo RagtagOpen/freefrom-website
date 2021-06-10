@@ -19,3 +19,12 @@
 		}
 	}
 }
+
+// make button look like a link
+@mixin button-link {
+	.wp-block-button__link, .wp-block-button {
+		background: transparent !important;
+		border: none !important;
+		padding-left: 0;
+	}
+}
