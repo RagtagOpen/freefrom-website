@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: RagTag
 Author URI: https://ragtag.org/
 Description: Custom theme for FreeFrom.org
-Version: 0.6
+Version: 0.5
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1197,19 +1197,31 @@ textarea {
 .wp-block-group.featured-media-panel .wp-block-columns .wp-block-column:first-child h2 {
   margin-top: 0; }
 
+.wp-block-group.image-w-paragraph .wp-block-button__link, .wp-block-group.image-w-paragraph .wp-block-button {
+  background: transparent !important;
+  border: none !important;
+  padding-left: 0; }
+
 .wp-block-group.image-w-paragraph h3 {
   font-weight: bold; }
 
 .wp-block-group.image-w-paragraph .wp-block-button__link:hover {
   color: #47CCCC !important; }
 
-.wp-block-group.detailed-image-grid .wp-block-column p:nth-of-type(1) {
-  margin-bottom: 5px;
-  font-size: 18px; }
+.wp-block-group.detailed-image-grid .wp-block-button__link, .wp-block-group.detailed-image-grid .wp-block-button {
+  background: transparent !important;
+  border: none !important;
+  padding-left: 0; }
 
-.wp-block-group.detailed-image-grid .wp-block-column p:nth-of-type(2) {
+.wp-block-group.detailed-image-grid .wp-block-column p {
   margin-top: 0;
   color: #6E7E91; }
+
+.wp-block-group.detailed-image-grid .wp-block-column strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #000; }
 
 .wp-block-group.detailed-image-grid .wp-block-button__link {
   padding-left: 0;
@@ -1217,21 +1229,30 @@ textarea {
   .wp-block-group.detailed-image-grid .wp-block-button__link:hover {
     color: #47CCCC !important; }
 
-.wp-block-group.copy-grid .wp-block-column p:nth-of-type(1) {
-  margin-bottom: 5px;
-  font-size: 18px; }
+.wp-block-group.preview-cta .wp-block-button__link, .wp-block-group.preview-cta .wp-block-button {
+  background: transparent !important;
+  border: none !important;
+  padding-left: 0; }
 
-.wp-block-group.copy-grid .wp-block-column p:nth-of-type(2) {
+.wp-block-group.copy-grid .wp-block-column p:nth-of-type(1) {
   margin-top: 0;
   color: #6E7E91; }
+
+.wp-block-group.copy-grid .wp-block-column strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #000; }
 
 .wp-block-group.three-column-call-outs .wp-block-column p:nth-of-type(1) {
-  margin-bottom: 5px;
-  font-size: 18px; }
-
-.wp-block-group.three-column-call-outs .wp-block-column p:nth-of-type(2) {
   margin-top: 0;
   color: #6E7E91; }
+
+.wp-block-group.three-column-call-outs .wp-block-column strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #000; }
 
 .wp-block-group.topic-detail-panel .wp-block-column p:first-child strong {
   font-size: 18px; }
