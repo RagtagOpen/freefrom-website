@@ -1,11 +1,13 @@
 @media screen and (max-width:$breakpoint_lg) {
-  .topic-detail-panel {
-    .has-background {
+  .wp-block-group.topic-detail-panel {
+    .wp-block-columns.has-background {
       margin: 0 calc(50% - 50vw);
       width: 100vw;
       padding-top: 0;
+    }
 
-      .wp-block-image {
+    .wp-block-columns.has-background:first-child {
+      figure.wp-block-image {
         margin: 0 calc(50% - 50vw);
       }
     }

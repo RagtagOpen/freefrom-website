@@ -33,7 +33,7 @@
 }
 
 .alignwide {
-	@media screen and (min-width:$breakpoint_xl) {
+	@media screen and (min-width:1200) {
 		margin-left: -4em;
 		margin-right: -4em;
 		width: calc( 100% + 8em );
