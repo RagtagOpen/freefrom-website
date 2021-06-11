@@ -70,9 +70,12 @@
 		text-transform: uppercase;
 		padding: 0 20px;
 
+		/*
+		Removing this for now to see if flex-wrap: wrap; on main-navigation ul is best.
 		&:last-child {
 			padding-right: 0;
 		}
+		*/
 
 		&:hover > a,
 		&.focus > a {
@@ -125,6 +128,7 @@
 	.main-navigation ul {
 		display: flex;
 		justify-content: flex-end;
+		flex-wrap: wrap;
 	}
 }
 

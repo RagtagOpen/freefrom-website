@@ -1,13 +1,13 @@
-$colors: ( black, #000 ),
-		( white, #FFF ),
-		( yellow, #FFB600 ),
-		( pink, #FF9797 ),
-		( orange, #F06449 ),
-		( teal, #47CCCC ),
-		( grey, #404040 ),
-		( steelgrey, #6E7E91 ),
-		( offwhite, #F5F6F4 ),
-		( off-white, #F5F6F4 );
+$colors: ( black, $color__black ),
+		( white, $color__white ),
+		( yellow, $color__yellow ),
+		( pink, $color__pink ),
+		( orange, $color__orange ),
+		( teal, $color__teal ),
+		( grey, $color__dark_grey ),
+		( steelgrey, $color__steel_grey ),
+		( offwhite, $color__off_white ),
+		( off-white, $color__off_white );
 
 /* Color Options
 --------------------------------------------- */
