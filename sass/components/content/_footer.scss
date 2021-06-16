@@ -1,5 +1,5 @@
 #colophon {
-	background: $color__black;
+	background: #000;
 	color: $color__white;
 	width: 100%;
 	padding: 60px;
@@ -8,6 +8,10 @@
 		@media screen and (min-width:$breakpoint_xl) {
 			display: flex;
 			justify-content: space-between;
+		}
+
+		.widget {
+			margin-bottom: 3em;
 		}
 
 		.gform_widget {
@@ -71,10 +75,18 @@
 			h3 {
 				font-size: 36px;
 				line-height: 54px;
+				margin: 0;
+			}
+
+			a {
+				height: 55px;
+				width: 70px;
 			}
 
 			svg {
 				color: $color__white;
+				height: 55px;
+				width: 55px;
 			}
 		}
 
@@ -104,6 +116,10 @@
 
 		.footer-3 {
 			max-width: 300px;
+		}
+
+		.textwidget p:first-child {
+			margin-top: 0;
 		}
 	}
 }
