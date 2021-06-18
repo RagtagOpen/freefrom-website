@@ -13,3 +13,9 @@
 		line-height: 72px;
 	}
 }
+
+figure.aligncenter {
+	iframe[style] {
+		margin: 0 auto !important;
+	}
+}

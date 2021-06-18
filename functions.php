@@ -9,7 +9,7 @@
 
 if ( ! defined( 'FREEFROM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FREEFROM_VERSION', '0.8' );
+	define( 'FREEFROM_VERSION', '0.9' );
 }
 
 if ( ! function_exists( 'freefrom_setup' ) ) :
@@ -48,7 +48,7 @@ if ( ! function_exists( 'freefrom_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'post-thumbnail', 1400, 545, true );
 		add_image_size( 'headshot', 400, 400, true );
-		add_image_size( 'blog', 905, 540, true );
+		add_image_size( 'blog', 905, 9999, false );
 		add_image_size( 'blog-thumb', 400, 400, true );
 
 		// This theme uses wp_nav_menu() in one location.
