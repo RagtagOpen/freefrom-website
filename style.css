@@ -931,7 +931,8 @@ body.post, body.page {
     padding: 0;
     columns: 2;
     -webkit-columns: 2;
-    -moz-columns: 2; }
+    -moz-columns: 2;
+    column-gap: 4em; }
     #colophon .footer-content .widget_nav_menu ul li {
       list-style: none;
       margin: 0;
