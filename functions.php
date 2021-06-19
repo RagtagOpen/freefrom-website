@@ -9,7 +9,7 @@
 
 if ( ! defined( 'FREEFROM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FREEFROM_VERSION', '0.9' );
+	define( 'FREEFROM_VERSION', '0.9.1' );
 }
 
 if ( ! function_exists( 'freefrom_setup' ) ) :

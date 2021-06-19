@@ -19,4 +19,20 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	&.no-underline {
+		text-decoration: none;
+	}
+
+	&.underline {
+		text-decoration: underline;
+	}
+}
+
+.no-underline a {
+	text-decoration: none;
+}
+
+.underline a {
+	text-decoration: underline;
 }

@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: RagTag
 Author URI: https://ragtag.org/
 Description: Custom theme for FreeFrom.org
-Version: 0.9
+Version: 0.9.1
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -396,17 +396,22 @@ h2 {
 
 h3 {
   font-weight: 600;
-  font-size: 42px;
-  line-height: 63px;
+  font-size: 36px;
+  line-height: 55px;
   letter-spacing: 0.05em; }
 
 h4 {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 27px; }
+  font-size: 24px;
+  line-height: 36px; }
 
 h5 {
   text-transform: uppercase; }
+
+h6 {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 30px; }
 
 @media screen and (max-width: 652px) {
   h1 {
@@ -560,6 +565,16 @@ a {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+  a.no-underline {
+    text-decoration: none; }
+  a.underline {
+    text-decoration: underline; }
+
+.no-underline a {
+  text-decoration: none; }
+
+.underline a {
+  text-decoration: underline; }
 
 /* Forms
 --------------------------------------------- */
@@ -879,6 +894,8 @@ body.post, body.page {
     line-height: 36px;
     color: #FF9797;
     margin: 0 0 10px 0; }
+  #colophon .footer-content .gform_widget .gform-body {
+    width: 400px; }
   #colophon .footer-content .gform_widget label {
     display: none; }
   #colophon .footer-content .gform_widget input {
@@ -1105,9 +1122,9 @@ body.post, body.page {
       height: 100%;
       line-height: 0; }
       .wp-block-group.image-cta .wp-block-columns.has-background figure img {
-        display: block;
+        display: block !important;
         height: 100%;
-        width: auto;
+        width: 100%;
         object-fit: cover;
         object-position: center center; }
   .wp-block-group.image-cta a {
@@ -1315,7 +1332,7 @@ body.post, body.page {
     position: absolute;
     left: 0;
     top: 45px;
-    font-family: 'Calibri', 'Times', serif; }
+    font-family: 'PT Sans', 'Calibri', 'Times', serif; }
   @media screen and (max-width: 652px) {
     .wp-block-group.impact-statement .wp-block-column:nth-child(2) p {
       font-size: 24px;
