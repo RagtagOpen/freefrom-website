@@ -162,19 +162,19 @@ if ( ! function_exists( 'freefrom_back_link' ) ) :
 		$type = get_post_type();
 		switch ( $type ) {
 			case 'post':
-				$url = home_url() . '/news';
+				$url = home_url() . '/news/';
 				$text = __( 'See more news', 'freefrom' );
 				break;
 			case 'team_member':
-				$url = home_url() . '/team';
+				$url = home_url() . '/our-team/';
 				$text = __( 'Back to our team', 'freefrom' );
 				break;
 			case 'event':
-				$url = home_url() . '/events';
+				$url = home_url() . '/events/';
 				$text = __( 'Back to events', 'freefrom' );
 				break;
 			case 'job':
-				$url = home_url() . '/employment';
+				$url = home_url() . '/employment/';
 				$text = __( 'Back to employment', 'freefrom' );
 				break;
 		}

@@ -660,7 +660,7 @@ body.post, body.page {
 .alignwide .wp-block-group__inner-container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%; }
+  width: 90%; }
 
 @media screen and (max-width: 822px) {
   .width-wrapper,
@@ -805,17 +805,19 @@ body.post, body.page {
     width: 100%;
     height: auto; }
 
-.has-back-link {
-  display: flex; }
-  .has-back-link .navigation-link {
-    width: 225px; }
-    .has-back-link .navigation-link a {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 18px; }
-  .has-back-link article {
-    width: calc( 100% - 225px); }
+.has-back-link .navigation-link a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px; }
+
+@media screen and (min-width: 652px) {
+  .has-back-link {
+    display: flex; }
+    .has-back-link .navigation-link {
+      width: 225px; }
+    .has-back-link article {
+      width: calc( 100% - 225px); } }
 
 .posted-on {
   font-weight: normal;
@@ -849,23 +851,25 @@ body.post, body.page {
     text-decoration: none;
     color: #292F36; }
 
-.single.single-team_member article {
-  display: flex;
-  justify-content: space-between; }
-
-.single.single-team_member .post-thumbnail {
-  width: 40%; }
-  .single.single-team_member .post-thumbnail img {
-    border-radius: 50%; }
-
-.single.single-team_member .team-member {
-  width: 55%;
-  padding-bottom: 100px; }
+@media screen and (min-width: 822px) {
+  .single.single-team_member article {
+    display: flex;
+    justify-content: space-between; }
+  .single.single-team_member .post-thumbnail {
+    width: 40%; }
+    .single.single-team_member .post-thumbnail img {
+      border-radius: 50%; }
+  .single.single-team_member .team-member {
+    width: 55%;
+    padding-bottom: 100px; } }
 
 .single.single-team_member .entry-title {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px; }
+
+.single.single-team_member .post-thumbnail img {
+  border-radius: 50%; }
 
 @media screen and (max-width: 652px) {
   .wp-block-group.topic-detail-panel .wp-block-columns.has-background {
@@ -936,13 +940,15 @@ body.post, body.page {
     font-size: 36px;
     line-height: 54px;
     margin: 0; }
-  #colophon .footer-content .jetpack_widget_social_icons a {
-    height: 55px;
-    width: 70px; }
   #colophon .footer-content .jetpack_widget_social_icons svg {
-    color: #fff;
-    height: 55px;
-    width: 55px; }
+    color: #fff; }
+  @media screen and (min-width: 482px) {
+    #colophon .footer-content .jetpack_widget_social_icons a {
+      height: 55px;
+      width: 70px; }
+    #colophon .footer-content .jetpack_widget_social_icons svg {
+      height: 55px;
+      width: 55px; } }
   #colophon .footer-content .widget_nav_menu ul {
     margin: 0;
     padding: 0;
@@ -1499,6 +1505,9 @@ body.post, body.page {
 
 figure.aligncenter iframe[style] {
   margin: 0 auto !important; }
+
+figure.aligncenter .wp-block-embed__wrapper {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Plugins

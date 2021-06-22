@@ -1,25 +1,33 @@
 .single.single-team_member {
-	article {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.post-thumbnail {
-		width: 40%;
-
-		img {
-			border-radius: 50%;
+	@media screen and (min-width:$breakpoint_xl) {
+		article {
+			display: flex;
+			justify-content: space-between;
 		}
-	}
 
-	.team-member {
-		width: 55%;
-		padding-bottom: 100px;
+		.post-thumbnail {
+			width: 40%;
+
+			img {
+				border-radius: 50%;
+			}
+		}
+
+		.team-member {
+			width: 55%;
+			padding-bottom: 100px;
+		}
 	}
 
 	.entry-title {
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 24px;
+	}
+
+	.post-thumbnail {
+		img {
+			border-radius: 50%;
+		}
 	}
 }

@@ -82,15 +82,20 @@
 				margin: 0;
 			}
 
-			a {
-				height: 55px;
-				width: 70px;
-			}
-
 			svg {
 				color: $color__white;
-				height: 55px;
-				width: 55px;
+			}
+
+			@media screen and (min-width:$breakpoint_sm) {
+				a {
+					height: 55px;
+					width: 70px;
+				}
+
+				svg {
+					height: 55px;
+					width: 55px;
+				}
 			}
 		}
 

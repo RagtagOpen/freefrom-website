@@ -18,4 +18,8 @@ figure.aligncenter {
 	iframe[style] {
 		margin: 0 auto !important;
 	}
+
+	.wp-block-embed__wrapper {
+		text-align: center;
+	}
 }
