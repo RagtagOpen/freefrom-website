@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: RagTag
 Author URI: https://ragtag.org/
 Description: Custom theme for FreeFrom.org
-Version: 0.9.2
+Version: 1.1
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -745,7 +745,9 @@ body.post, body.page {
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
-    display: none; }
+    display: none;
+    background: #F5F6F4;
+    color: #292F36; }
   .main-navigation ul {
     display: flex;
     justify-content: flex-end;
@@ -1168,6 +1170,9 @@ body.post, body.page {
   font-weight: 600;
   margin: 1em 0; }
 
+.wp-block-group.featured-cta-bottom a {
+  color: #292F36; }
+
 .wp-block-group.featured-cta-bottom .wp-block-button.is-style-outline {
   position: relative;
   top: 25px;
@@ -1180,7 +1185,7 @@ body.post, body.page {
     text-transform: uppercase; }
 
 .wp-block-group.featured-cta-bottom a {
-  color: #fff;
+  color: #292F36;
   text-decoration: none; }
 
 .wp-block-group.image-w-cta {
@@ -1293,7 +1298,7 @@ body.post, body.page {
   .wp-block-group.video-w-statement h2:after {
     content: '';
     display: block;
-    width: 50%;
+    width: 58%;
     height: 10px;
     background: #47CCCC;
     position: absolute;

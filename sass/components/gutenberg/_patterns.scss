@@ -66,6 +66,10 @@
 		margin: 1em 0; // making the top & bottom even
 	}
 
+	a {
+		color: $color__black;
+	}
+
 	.wp-block-button.is-style-outline {
 		// These are pretty specific to .home-top-ctas
 		position: relative;
@@ -240,7 +244,7 @@
 		&:after {
 			content: '';
 			display: block;
-			width: 50%;
+			width: 58%;
 			height: 10px;
 			background: $color__teal;
 			position: absolute;
