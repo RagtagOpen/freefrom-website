@@ -1,10 +1,10 @@
 /*!
 Theme Name: FreeFrom
-Theme URI: http://underscores.me/
+Theme URI: http://freefrom.org/
 Author: RagTag
 Author URI: https://ragtag.org/
 Description: Custom theme for FreeFrom.org
-Version: 1.1
+Version: 1.2
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -369,7 +369,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #292F36;
+  color: #000000;
   font-family: "poppins", sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
@@ -736,7 +736,7 @@ body.post, body.page {
   .main-navigation a {
     display: block;
     text-decoration: none;
-    color: #292F36; }
+    color: #000000; }
 
 /* Small menu. */
 .menu-toggle,
@@ -747,7 +747,7 @@ body.post, body.page {
   .menu-toggle {
     display: none;
     background: #F5F6F4;
-    color: #292F36; }
+    color: #000000; }
   .main-navigation ul {
     display: flex;
     justify-content: flex-end;
@@ -851,7 +851,7 @@ body.post, body.page {
   text-transform: none; }
   .posts-feed .entry-title a {
     text-decoration: none;
-    color: #292F36; }
+    color: #000000; }
 
 @media screen and (min-width: 822px) {
   .single.single-team_member article {
@@ -911,25 +911,25 @@ body.post, body.page {
     #colophon .footer-content .gform_widget input::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       font-weight: 600;
-      color: #292F36; }
+      color: #000000; }
     #colophon .footer-content .gform_widget input::-moz-placeholder {
       /* Firefox 19+ */
       font-weight: 600;
-      color: #292F36; }
+      color: #000000; }
     #colophon .footer-content .gform_widget input:-ms-input-placeholder {
       /* IE 10+ */
       font-weight: 600;
-      color: #292F36; }
+      color: #000000; }
     #colophon .footer-content .gform_widget input:-moz-placeholder {
       /* Firefox 18- */
       font-weight: 600;
-      color: #292F36; }
+      color: #000000; }
     #colophon .footer-content .gform_widget input.button {
       background: #47CCCC;
       font-weight: 700;
       font-size: 24px;
       text-transform: uppercase;
-      color: #292F36;
+      color: #000000;
       border: none;
       padding: 16px 20px; }
   #colophon .footer-content .gform_widget form {
@@ -1061,10 +1061,10 @@ body.post, body.page {
 /* Color Options
 --------------------------------------------- */
 .has-black-color {
-  color: #292F36 !important; }
+  color: #000000 !important; }
 
 .has-black-background-color {
-  background-color: #292F36 !important; }
+  background-color: #000000 !important; }
 
 .has-white-color {
   color: #fff !important; }
@@ -1171,7 +1171,7 @@ body.post, body.page {
   margin: 1em 0; }
 
 .wp-block-group.featured-cta-bottom a {
-  color: #292F36; }
+  color: #000000; }
 
 .wp-block-group.featured-cta-bottom .wp-block-button.is-style-outline {
   position: relative;
@@ -1185,7 +1185,7 @@ body.post, body.page {
     text-transform: uppercase; }
 
 .wp-block-group.featured-cta-bottom a {
-  color: #292F36;
+  color: #000000;
   text-decoration: none; }
 
 .wp-block-group.image-w-cta {
@@ -1199,7 +1199,7 @@ body.post, body.page {
     .wp-block-group.image-w-cta figure img {
       width: 100%; }
   .wp-block-group.image-w-cta a {
-    color: #292F36;
+    color: #000000;
     text-decoration: none; }
   .wp-block-group.image-w-cta p {
     font-weight: 700;
@@ -1321,11 +1321,21 @@ body.post, body.page {
   line-height: 1.5;
   letter-spacing: 0.02em; }
 
+.wp-block-group.impact-statement .wp-block-group__inner-container .wp-block-group__inner-container {
+  width: 100%; }
+
+.wp-block-group.impact-statement .has-background {
+  padding: 0; }
+
 .wp-block-group.impact-statement .wp-block-column:first-child p[style] {
   font-weight: 700;
   font-size: 52px;
   line-height: 78px;
   text-transform: uppercase; }
+  @media screen and (max-width: 592px) {
+    .wp-block-group.impact-statement .wp-block-column:first-child p[style] {
+      font-size: 36px;
+      line-height: 50px; } }
 
 .wp-block-group.impact-statement .wp-block-column:first-child .wp-block-button__link.has-background {
   font-size: 40px; }
@@ -1335,14 +1345,19 @@ body.post, body.page {
   font-size: 36px;
   line-height: 54px;
   padding-left: 150px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 0; }
+  @media screen and (max-width: 592px) {
+    .wp-block-group.impact-statement .wp-block-column:nth-child(2) p {
+      font-size: 24px;
+      line-height: 38px; } }
   .wp-block-group.impact-statement .wp-block-column:nth-child(2) p:before {
     content: '\201C';
     color: #F06449;
     font-size: 240px;
     position: absolute;
     left: 0;
-    top: 45px;
+    top: 75px;
     font-family: 'PT Sans', 'Calibri', 'Times', serif; }
   @media screen and (max-width: 652px) {
     .wp-block-group.impact-statement .wp-block-column:nth-child(2) p {
@@ -1392,7 +1407,7 @@ body.post, body.page {
   display: inline-block;
   margin-bottom: 5px;
   font-size: 18px;
-  color: #292F36; }
+  color: #000000; }
 
 .wp-block-group.detailed-image-grid .wp-block-button__link {
   padding-left: 0;
@@ -1413,7 +1428,7 @@ body.post, body.page {
   display: inline-block;
   margin-bottom: 5px;
   font-size: 18px;
-  color: #292F36; }
+  color: #000000; }
 
 .wp-block-group.three-column-call-outs .wp-block-column p:nth-of-type(1) {
   margin-top: 0;
@@ -1423,10 +1438,22 @@ body.post, body.page {
   display: inline-block;
   margin-bottom: 5px;
   font-size: 18px;
-  color: #292F36; }
+  color: #000000; }
 
 .wp-block-group.topic-detail-panel .wp-block-column p:first-child strong {
   font-size: 18px; }
+
+.wp-block-group.topic-detail-panel .wp-block-columns:first-child .wp-block-column:nth-child(1) {
+  margin: -1.25em 0 -1.25em -2.25em; }
+  .wp-block-group.topic-detail-panel .wp-block-columns:first-child .wp-block-column:nth-child(1) figure {
+    width: 100%;
+    height: 100%; }
+  .wp-block-group.topic-detail-panel .wp-block-columns:first-child .wp-block-column:nth-child(1) img {
+    display: block !important;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center; }
 
 .wp-block-group.topic-detail-panel .wp-block-columns:first-child .wp-block-column:nth-child(2) {
   margin-left: 0;
@@ -1482,8 +1509,13 @@ body.post, body.page {
   margin: 0; }
 
 .home-strategy .wp-block-group.featured-cta-bottom {
-  padding: 0;
+  padding-top: 0;
   margin: 30px 0; }
+  .home-strategy .wp-block-group.featured-cta-bottom .wp-block-group__inner-container {
+    width: 100%;
+    padding: 0 30px; }
+    .home-strategy .wp-block-group.featured-cta-bottom .wp-block-group__inner-container figure {
+      margin: 0 -30px; }
 
 .wp-block-group.four-column-call-outs {
   padding-top: 0; }
