@@ -9,7 +9,7 @@
 
 if ( ! defined( 'FREEFROM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FREEFROM_VERSION', '1.2' );
+	define( 'FREEFROM_VERSION', '1.3' );
 }
 
 if ( ! function_exists( 'freefrom_setup' ) ) :
@@ -429,6 +429,15 @@ function freefrom_register_block_patterns() {
 }
 add_action( 'init', 'freefrom_register_block_patterns' );
 
+add_action('init', function() {
+	$inline_css = '.is-style-small { font-size: 18px }, .editor-styles-wrapper .is-style-small { font-size: 12px }';
+	register_block_style('core/button', [
+		'name' => 'small',
+		'label' => __('Small Button', 'freefrom'),
+		'inline_style' => $inline_css
+	]);
+});
+
 /*
  * Custom Post Types
  */
@@ -539,6 +548,7 @@ function freefrom_cpt_event() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
+		'taxonomies'            => array( 'event_category' ),
 	);
 	register_post_type( 'event', $args );
 
@@ -600,3 +610,43 @@ function freefrom_cpt_job() {
 
 }
 add_action( 'init', 'freefrom_cpt_job', 0 );
+
+// Register Custom Taxonomy
+function freefrom_event_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Event Categories', 'Taxonomy General Name', 'freefrom' ),
+		'singular_name'              => _x( 'Event Category', 'Taxonomy Singular Name', 'freefrom' ),
+		'menu_name'                  => __( 'Event Category', 'freefrom' ),
+		'all_items'                  => __( 'All Event Categories', 'freefrom' ),
+		'parent_item'                => __( 'Parent Event Category', 'freefrom' ),
+		'parent_item_colon'          => __( 'Parent Event Category:', 'freefrom' ),
+		'new_item_name'              => __( 'New Event Category Name', 'freefrom' ),
+		'add_new_item'               => __( 'Add New Event Category', 'freefrom' ),
+		'edit_item'                  => __( 'Edit Event Category', 'freefrom' ),
+		'update_item'                => __( 'Update Event Category', 'freefrom' ),
+		'view_item'                  => __( 'View Event Category', 'freefrom' ),
+		'separate_items_with_commas' => __( 'Separate Event Categories with commas', 'freefrom' ),
+		'add_or_remove_items'        => __( 'Add or remove Event Categories', 'freefrom' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'freefrom' ),
+		'popular_items'              => __( 'Popular Event Categories', 'freefrom' ),
+		'search_items'               => __( 'Search Event Categories', 'freefrom' ),
+		'not_found'                  => __( 'Not Found', 'freefrom' ),
+		'no_terms'                   => __( 'No Event Categories', 'freefrom' ),
+		'items_list'                 => __( 'Event Categories list', 'freefrom' ),
+		'items_list_navigation'      => __( 'Event Categories list navigation', 'freefrom' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false,
+		'show_in_rest'               => true,
+	);
+	register_taxonomy( 'event_category', array( 'event' ), $args );
+
+}
+add_action( 'init', 'freefrom_event_taxonomy', 0 );
