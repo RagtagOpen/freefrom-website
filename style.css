@@ -4,7 +4,7 @@ Theme URI: http://freefrom.org/
 Author: RagTag
 Author URI: https://ragtag.org/
 Description: Custom theme for FreeFrom.org
-Version: 1.4
+Version: 1.5
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1522,7 +1522,7 @@ body.post, body.page {
       flex-basis: 45% !important;
       flex-grow: 0; }
 
-p.has-steelgrey-color b {
+p.has-steelgrey-color strong {
   color: #000000; }
 
 .wp-block-group {
@@ -1550,13 +1550,6 @@ figure.aligncenter .wp-block-embed__wrapper {
   font-size: 18px; }
   .wp-block-button.is-style-small .wp-block-button__link.has-background {
     padding: 4px 20px 0 20px; }
-
-@media (max-width: 800px) {
-  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 1;
-    grid-row: 1; } }
 
 /*--------------------------------------------------------------
 # Plugins

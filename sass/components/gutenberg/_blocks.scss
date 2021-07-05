@@ -31,12 +31,3 @@ figure.aligncenter {
 		padding: 4px 20px 0 20px;
 	}
 }
-
-@media (max-width: 800px) {
-	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
-		-ms-grid-column: 1;
-		grid-column: 1;
-		-ms-grid-row: 1;
-		grid-row: 1;
-	}
-}
