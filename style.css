@@ -4,7 +4,7 @@ Theme URI: http://freefrom.org/
 Author: RagTag
 Author URI: https://ragtag.org/
 Description: Custom theme for FreeFrom.org
-Version: 1.3
+Version: 1.4
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1297,7 +1297,7 @@ body.post, body.page {
   position: relative; }
   @media screen and (max-width: 652px) {
     .wp-block-group.video-w-statement h2 {
-      font-size: 42px !important;
+      font-size: 42px;
       line-height: 1.5; } }
   .wp-block-group.video-w-statement h2:after {
     content: '';
@@ -1308,14 +1308,6 @@ body.post, body.page {
     position: absolute;
     right: 0;
     bottom: -30px; }
-
-.wp-block-group.video-w-statement .wp-block-column:not(:first-child) {
-  margin-left: 5rem;
-  flex-basis: 650px;
-  flex-grow: 0; }
-  @media screen and (max-width: 599px) {
-    .wp-block-group.video-w-statement .wp-block-column:not(:first-child) {
-      margin-left: 0; } }
 
 .wp-block-button__link.has-background {
   text-transform: uppercase;
@@ -1434,15 +1426,12 @@ body.post, body.page {
   font-size: 18px;
   color: #000000; }
 
-.wp-block-group.three-column-call-outs .wp-block-column p:nth-of-type(1) {
+.wp-block-group.three-column-call-outs .wp-block-column p {
   margin-top: 0;
   color: #6E7E91; }
 
-.wp-block-group.three-column-call-outs .wp-block-column strong {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: #000000; }
+.wp-block-group.three-column-call-outs h5 {
+  margin-bottom: 0; }
 
 .wp-block-group.topic-detail-panel .wp-block-column p:first-child strong {
   font-size: 18px; }
@@ -1533,6 +1522,9 @@ body.post, body.page {
       flex-basis: 45% !important;
       flex-grow: 0; }
 
+p.has-steelgrey-color b {
+  color: #000000; }
+
 .wp-block-group {
   padding: 50px 0; }
 
@@ -1558,6 +1550,13 @@ figure.aligncenter .wp-block-embed__wrapper {
   font-size: 18px; }
   .wp-block-button.is-style-small .wp-block-button__link.has-background {
     padding: 4px 20px 0 20px; }
+
+@media (max-width: 800px) {
+  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1; } }
 
 /*--------------------------------------------------------------
 # Plugins

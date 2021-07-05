@@ -241,8 +241,7 @@
 		text-align: right;
 		position: relative;
 		@media screen and (max-width:$breakpoint_lg) {
-			// HACK this !important is only here so that we can override an existing inline style. Remove once that inline style is gone.
-			font-size: 42px !important;
+			font-size: 42px;
 			line-height: 1.5;
 		}
 
@@ -255,16 +254,6 @@
 			position: absolute;
 			right: 0;
 			bottom: -30px;
-		}
-	}
-
-	.wp-block-column:not(:first-child) {
-		margin-left: 5rem;
-		flex-basis: 650px;
-		flex-grow: 0;
-		// HACK this breakpoint is meant to match the wordpress breakpoint.
-		@media screen and (max-width: 599px) {
-			margin-left: 0;
 		}
 	}
 }
@@ -422,16 +411,13 @@
 }
 
 .wp-block-group.three-column-call-outs {
-	.wp-block-column p:nth-of-type(1) {
+	.wp-block-column p {
 		margin-top: 0;
 		color: $color__steel_grey;
 	}
 
-	.wp-block-column strong {
-		display: inline-block;
-		margin-bottom: 5px;
-		font-size: 18px;
-		color: $color__black;
+	h5 {
+		margin-bottom: 0;
 	}
 }
 
@@ -577,4 +563,9 @@
 			flex-grow: 0;
 		}
 	}
+}
+
+
+p.has-steelgrey-color b {
+	color: $color__black;
 }

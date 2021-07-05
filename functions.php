@@ -9,7 +9,7 @@
 
 if ( ! defined( 'FREEFROM_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'FREEFROM_VERSION', '1.3' );
+	define( 'FREEFROM_VERSION', '1.4' );
 }
 
 if ( ! function_exists( 'freefrom_setup' ) ) :
@@ -402,7 +402,7 @@ function freefrom_register_block_patterns() {
 			'freefrom/three-column-call-outs',
 			array(
 				'title'       => '3-Column Call-Outs',
-				'content'     => "<!-- wp:group {\"className\":\"three-column-call-outs\"} --><div class=\"wp-block-group three-column-call-outs\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"width\":256,\"height\":256,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large is-resized\"><img src=\"https://picsum.photos/200\" alt=\"\" width=\"256\" height=\"256\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<p><strong>EVENT NAME</strong><br>August 14, 2021<br>9:00a - 5:00p (PST)</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"luminous-vivid-amber\",\"className\":\"is-style-fill\"} -->\n<div class=\"wp-block-button is-style-fill\"><a class=\"wp-block-button__link has-luminous-vivid-amber-background-color has-background\">Register</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"width\":256,\"height\":256,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large is-resized\"><img src=\"https://picsum.photos/200\" alt=\"\" width=\"256\" height=\"256\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<p><strong>EVENT NAME</strong><br>August 14, 2021<br>9:00a - 5:00p (PST)</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"luminous-vivid-amber\",\"className\":\"is-style-fill\"} -->\n<div class=\"wp-block-button is-style-fill\"><a class=\"wp-block-button__link has-luminous-vivid-amber-background-color has-background\">Register</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://picsum.photos/256\" alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<p><strong>EVENT NAME</strong><br>August 14, 2021<br>9:00a - 5:00p (PST)</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"luminous-vivid-amber\",\"className\":\"is-style-fill\"} -->\n<div class=\"wp-block-button is-style-fill\"><a class=\"wp-block-button__link has-luminous-vivid-amber-background-color has-background\">Register</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div><!-- /wp:group -->",
+				'content'     => "<!-- wp:group {\"className\":\"three-column-call-outs\"} --><div class=\"wp-block-group three-column-call-outs\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"width\":256,\"height\":256,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large is-resized\"><img src=\"https://picsum.photos/200\" alt=\"\" width=\"256\" height=\"256\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<h5>EVENT NAME</h5><p>August 14, 2021<br>9:00a - 5:00p (PST)</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"luminous-vivid-amber\",\"className\":\"is-style-fill\"} -->\n<div class=\"wp-block-button is-style-fill\"><a class=\"wp-block-button__link has-luminous-vivid-amber-background-color has-background\">Register</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"width\":256,\"height\":256,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large is-resized\"><img src=\"https://picsum.photos/200\" alt=\"\" width=\"256\" height=\"256\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<p><strong>EVENT NAME</strong><br>August 14, 2021<br>9:00a - 5:00p (PST)</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"luminous-vivid-amber\",\"className\":\"is-style-fill\"} -->\n<div class=\"wp-block-button is-style-fill\"><a class=\"wp-block-button__link has-luminous-vivid-amber-background-color has-background\">Register</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://picsum.photos/256\" alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<p><strong>EVENT NAME</strong><br>August 14, 2021<br>9:00a - 5:00p (PST)</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"luminous-vivid-amber\",\"className\":\"is-style-fill\"} -->\n<div class=\"wp-block-button is-style-fill\"><a class=\"wp-block-button__link has-luminous-vivid-amber-background-color has-background\">Register</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div><!-- /wp:group -->",
 				'categories'  => array('freefrom')
 			)
 		);
@@ -508,7 +508,7 @@ function freefrom_cpt_event() {
 		'archives'              => __( 'Event Archives', 'freefrom' ),
 		'attributes'            => __( 'Event Attributes', 'freefrom' ),
 		'parent_item_colon'     => __( 'Parent Event:', 'freefrom' ),
-		'all_items'             => __( 'All Team Events', 'freefrom' ),
+		'all_items'             => __( 'All Events', 'freefrom' ),
 		'add_new_item'          => __( 'Add New Event', 'freefrom' ),
 		'add_new'               => __( 'Add New', 'freefrom' ),
 		'new_item'              => __( 'New Event', 'freefrom' ),
@@ -548,7 +548,6 @@ function freefrom_cpt_event() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
-		'taxonomies'            => array( 'event_category' ),
 	);
 	register_post_type( 'event', $args );
 
@@ -610,43 +609,3 @@ function freefrom_cpt_job() {
 
 }
 add_action( 'init', 'freefrom_cpt_job', 0 );
-
-// Register Custom Taxonomy
-function freefrom_event_taxonomy() {
-
-	$labels = array(
-		'name'                       => _x( 'Event Categories', 'Taxonomy General Name', 'freefrom' ),
-		'singular_name'              => _x( 'Event Category', 'Taxonomy Singular Name', 'freefrom' ),
-		'menu_name'                  => __( 'Event Category', 'freefrom' ),
-		'all_items'                  => __( 'All Event Categories', 'freefrom' ),
-		'parent_item'                => __( 'Parent Event Category', 'freefrom' ),
-		'parent_item_colon'          => __( 'Parent Event Category:', 'freefrom' ),
-		'new_item_name'              => __( 'New Event Category Name', 'freefrom' ),
-		'add_new_item'               => __( 'Add New Event Category', 'freefrom' ),
-		'edit_item'                  => __( 'Edit Event Category', 'freefrom' ),
-		'update_item'                => __( 'Update Event Category', 'freefrom' ),
-		'view_item'                  => __( 'View Event Category', 'freefrom' ),
-		'separate_items_with_commas' => __( 'Separate Event Categories with commas', 'freefrom' ),
-		'add_or_remove_items'        => __( 'Add or remove Event Categories', 'freefrom' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'freefrom' ),
-		'popular_items'              => __( 'Popular Event Categories', 'freefrom' ),
-		'search_items'               => __( 'Search Event Categories', 'freefrom' ),
-		'not_found'                  => __( 'Not Found', 'freefrom' ),
-		'no_terms'                   => __( 'No Event Categories', 'freefrom' ),
-		'items_list'                 => __( 'Event Categories list', 'freefrom' ),
-		'items_list_navigation'      => __( 'Event Categories list navigation', 'freefrom' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => false,
-		'show_in_rest'               => true,
-	);
-	register_taxonomy( 'event_category', array( 'event' ), $args );
-
-}
-add_action( 'init', 'freefrom_event_taxonomy', 0 );
