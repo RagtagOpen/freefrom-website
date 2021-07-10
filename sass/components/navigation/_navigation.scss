@@ -119,12 +119,16 @@
 	display: block;
 }
 
+.menu-toggle {
+	background: $color__off_white;
+	color: $color__black;
+	border-color: $color__off_white;
+}
+
 @media screen and (min-width: 37.5em) {
 
 	.menu-toggle {
 		display: none;
-		background: $color__off_white;
-		color: $color__black;
 	}
 
 	.main-navigation ul {

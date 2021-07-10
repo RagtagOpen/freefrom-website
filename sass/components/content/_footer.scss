@@ -25,6 +25,7 @@
 
 			.gform-body {
 				width: 400px;
+				max-width: 100%;
 			}
 
 			label {
@@ -60,17 +61,23 @@
 					text-transform: uppercase;
 					color: $color__black;
 					border: none;
-					padding: 16px 20px;
+					padding: 5px 20px;
+					@media screen and (min-width:$breakpoint_sm) {
+						padding: 16px 20px;
+					}
 				}
 			}
 
 			form {
-				display: flex;
 				max-width: 375px;
 
 				.gform_footer {
 					margin: 0;
 					padding: 0;
+				}
+
+				@media screen and (min-width:$breakpoint_sm) {
+					display: flex;
 				}
 			}
 		}
@@ -103,10 +110,6 @@
 			ul {
 				margin: 0;
 				padding: 0;
-				columns: 2;
-				-webkit-columns: 2;
-				-moz-columns: 2;
-				column-gap: 4em;
 
 				li {
 					list-style: none;
@@ -120,6 +123,15 @@
 						font-size: 18px;
 						line-height: 27px;
 					}
+				}
+			}
+
+			@media screen and (min-width:$breakpoint_sm) {
+				ul {
+					columns: 2;
+					-webkit-columns: 2;
+					-moz-columns: 2;
+					column-gap: 4em;
 				}
 			}
 		}
